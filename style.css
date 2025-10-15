@@ -326,6 +326,20 @@ footer {
     font-size: 0.92rem;
     color: #888;
 }
+.footer-links {
+    display: flex;
+    gap: 20px;
+    margin-top: 8px;
+}
+.footer-links a {
+    color: #666;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color .2s;
+}
+.footer-links a:hover {
+    color: #217ab7;
+}
 .footer-social {
     display: flex;
     gap: 15px;
@@ -338,6 +352,62 @@ footer {
 .footer-social img:hover {
     opacity: 1;
 }
+
+/* Legal Pages */
+.legal-content {
+    padding: 60px 0 80px 0;
+    min-height: 60vh;
+}
+.legal-content h1 {
+    font-size: 2.5rem;
+    color: #217ab7;
+    margin-bottom: 40px;
+    text-align: center;
+}
+.legal-section {
+    margin-bottom: 40px;
+}
+.legal-section h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 15px;
+    margin-top: 30px;
+}
+.legal-section p {
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 15px;
+}
+.legal-section ul {
+    line-height: 1.8;
+    color: #555;
+    margin-left: 20px;
+}
+.legal-section li {
+    margin-bottom: 8px;
+}
+.legal-section a {
+    color: #217ab7;
+    text-decoration: none;
+}
+.legal-section a:hover {
+    text-decoration: underline;
+}
+.back-link {
+    margin-top: 50px;
+    text-align: center;
+}
+.back-link a {
+    color: #217ab7;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: color .2s;
+}
+.back-link a:hover {
+    color: #17609a;
+}
+
 
 /* Responsive */
 @media (max-width: 900px) {
