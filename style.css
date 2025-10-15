@@ -21,8 +21,17 @@ header {
     align-items: center;
     justify-content: space-between;
 }
+.logo {
+    text-decoration: none;
+    display: block;
+    line-height: 0;
+}
 .logo img {
     height: 32px;
+    transition: opacity .2s;
+}
+.logo:hover img {
+    opacity: 0.8;
 }
 nav {
     display: flex;
