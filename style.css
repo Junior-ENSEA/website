@@ -27,7 +27,7 @@ header {
     line-height: 0;
 }
 .logo img {
-    height: 32px;
+    height: 48px;
     transition: opacity .2s;
 }
 .logo:hover img {
@@ -48,7 +48,8 @@ nav a {
 .btn-header {
     background: #217ab7;
     color: #fff;
-    padding: 8px 24px;
+    padding: 16px 40px;
+    font-size: 1.15rem;
     border-radius: 6px;
     text-decoration: none;
     font-weight: 500;
