@@ -1,6 +1,6 @@
 # Junior ENSEA - Site Web Officiel
 
-Site vitrine de Junior ENSEA, association conseil en électronique, informatique et systèmes embarqués.
+Site vitrine de l'association Junior ENSEA, association agissant comme cabinet conseil en électronique, informatique et systèmes embarqués.
 
 **Slogan :** *Your Project, Our Matter*
 
