@@ -308,7 +308,7 @@ nav a {
 
 /* Footer */
 footer {
-    margin-top: 40px;
+    margin-top: 0;
     border-top: 2px solid #e2eaf2;
     background: #fff;
     padding: 28px 0;
@@ -547,4 +547,114 @@ footer {
 }
 @media (max-width: 520px) {
     .team-grid { grid-template-columns: 1fr; }
+}
+
+/* Prestations Page */
+.prestation-section {
+    padding: 60px 0;
+    background: #fff;
+}
+
+.prestation-section.alt {
+    background: #f8f9fa;
+}
+
+.prestation-header {
+    margin-bottom: 30px;
+}
+
+.prestation-header h2 {
+    color: #217ab7;
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin: 0 0 18px 0;
+    position: relative;
+}
+
+.prestation-header h2::after {
+    content: '';
+    display: block;
+    width: 48px;
+    height: 3px;
+    background: #217ab7;
+    margin-top: 8px;
+}
+
+.prestation-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px;
+}
+
+.prestation-list li {
+    background: #fff;
+    padding: 16px 20px;
+    border-left: 4px solid #217ab7;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    font-size: 1rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.prestation-list li:hover {
+    transform: translateX(5px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.prestation-section.alt .prestation-list li {
+    background: #ffffff;
+}
+
+/* CTA Section */
+.cta-section {
+    background: linear-gradient(135deg, #217ab7 0%, #17609a 100%);
+    color: #fff;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.cta-section h2 {
+    font-size: 2.2rem;
+    margin: 0 0 16px 0;
+    font-weight: 600;
+}
+
+.cta-section p {
+    font-size: 1.2rem;
+    margin: 0 0 32px 0;
+    opacity: 0.95;
+}
+
+.btn-cta {
+    display: inline-block;
+    background: #fff;
+    color: #217ab7;
+    padding: 16px 48px;
+    font-size: 1.15rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+@media (max-width: 768px) {
+    .prestation-list {
+        grid-template-columns: 1fr;
+    }
+    
+    .prestation-header h2 {
+        font-size: 1.6rem;
+    }
+    
+    .cta-section h2 {
+        font-size: 1.8rem;
+    }
 }
