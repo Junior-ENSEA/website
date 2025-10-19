@@ -14,11 +14,40 @@
             <a href="../" class="logo">
                 <img src="../images/logo-junior-ensea.png" alt="Junior Ensea Logo" />
             </a>
-            <nav>
+
+            <!-- Desktop nav -->
+            <nav class="desktop-nav">
                 <a href="../prestations">Nos prestations</a>
                 <a href="../notre-equipe">Notre équipe</a>
             </nav>
+
             <a href="mailto:junior@ensea.fr" class="btn-header">Nous contacter</a>
+
+            <!-- Mobile toggle -->
+            <button class="mobile-menu-toggle" aria-controls="mobileMenu" aria-expanded="false" aria-label="Ouvrir le menu">
+                <span class="hamburger" aria-hidden="true"></span>
+            </button>
+        </div>
+
+        <!-- Mobile full-screen menu -->
+        <div id="mobileMenu" class="mobile-menu" aria-hidden="true">
+            <div class="mobile-menu-inner container">
+                <div class="mobile-menu-top">
+                    <a href="../" class="logo mobile-logo">
+                        <img src="../images/logo-junior-ensea.png" alt="Junior Ensea Logo" />
+                    </a>
+                    <button class="mobile-menu-close" aria-label="Fermer le menu">✕</button>
+                </div>
+
+                <ul class="mobile-menu-list">
+                    <li class="mobile-item"><a href="../prestations">Nos prestations</a></li>
+                    <li class="mobile-item"><a href="../notre-equipe">Notre équipe</a></li>
+                </ul>
+                
+                <div class="mobile-cta">
+                    <a href="mailto:junior@ensea.fr" class="btn-header">Nous contacter</a>
+                </div>
+            </div>
         </div>
     </header>
 
@@ -176,5 +205,32 @@
             </div>
         </div>
     </footer>
+    <script>
+        (function(){
+            const toggleBtn = document.querySelector('.mobile-menu-toggle');
+            const mobileMenu = document.getElementById('mobileMenu');
+            const closeBtn = document.querySelector('.mobile-menu-close');
+
+            const openMenu = () => {
+                document.body.classList.add('mobile-open');
+                toggleBtn && toggleBtn.setAttribute('aria-expanded','true');
+                mobileMenu && mobileMenu.setAttribute('aria-hidden','false');
+            };
+            const closeMenu = () => {
+                document.body.classList.remove('mobile-open');
+                toggleBtn && toggleBtn.setAttribute('aria-expanded','false');
+                mobileMenu && mobileMenu.setAttribute('aria-hidden','true');
+            };
+
+            toggleBtn && toggleBtn.addEventListener('click', ()=>{
+                if(document.body.classList.contains('mobile-open')) closeMenu(); else openMenu();
+            });
+            closeBtn && closeBtn.addEventListener('click', closeMenu);
+
+            mobileMenu && mobileMenu.addEventListener('click', (e)=>{
+                if(e.target === mobileMenu) closeMenu();
+            });
+        })();
+    </script>
 </body>
 </html>

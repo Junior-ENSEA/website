@@ -386,6 +386,90 @@ footer {
     }
 }
 
+/* Mobile menu styles */
+.mobile-menu-toggle {
+    display: none; /* visible on small screens */
+    background: transparent; /* transparent by default */
+    border: none;
+    width: 52px;
+    height: 52px;
+    border-radius: 8px;
+    color: #000;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background .18s ease; /* sync with bars */
+}
+.mobile-menu-toggle .hamburger {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: #000; /* black bars by default */
+    position: relative;
+    transition: background .18s ease, transform .18s ease;
+}
+.mobile-menu-toggle .hamburger::before,
+.mobile-menu-toggle .hamburger::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 22px;
+    height: 2px;
+    background: #000; /* black */
+    transition: background .18s ease, transform .18s ease;
+}
+.mobile-menu-toggle .hamburger::before { top: -7px; }
+.mobile-menu-toggle .hamburger::after { top: 7px; }
+
+/* hover/active state: blue background with white bars */
+.mobile-menu-toggle:hover,
+.mobile-menu-toggle:focus {
+    background: #217ab7;
+}
+.mobile-menu-toggle:hover .hamburger,
+.mobile-menu-toggle:focus .hamburger,
+.mobile-menu-toggle:hover .hamburger::before,
+.mobile-menu-toggle:focus .hamburger::before,
+.mobile-menu-toggle:hover .hamburger::after,
+.mobile-menu-toggle:focus .hamburger::after {
+    background: #fff;
+}
+
+.mobile-menu {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: #fff;
+    z-index: 2000;
+    overflow-y: auto;
+}
+.mobile-menu-inner { padding: 22px 0 40px; }
+.mobile-menu-top { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.mobile-logo img { height: 48px; }
+.mobile-menu-close { background: transparent; border: none; font-size: 26px; cursor: pointer; }
+.mobile-menu-list { list-style: none; padding: 20px 8px; margin: 0; }
+.mobile-menu-list .mobile-item { margin-bottom: 18px; }
+.mobile-menu-list a, .mobile-menu-list .submenu-toggle { color: #0b3a3a; text-decoration: none; font-size: 18px; font-weight: 600; display: block; padding: 10px 6px; }
+.mobile-cta { padding: 18px 8px; }
+.submenu { display: none; list-style: none; margin: 8px 0 0 12px; padding: 0; }
+.submenu li { margin-bottom: 10px; }
+.chev { float: right; color: #666; }
+
+/* Responsive toggles */
+@media (max-width: 900px) {
+    nav.desktop-nav { display: none; }
+    .mobile-menu-toggle { display: inline-flex; }
+    /* hide the header's inline contact button but keep the one inside the mobile menu */
+    .header-container > .btn-header { display: none; }
+}
+
+/* when body has this class, show the menu */
+body.mobile-open { overflow: hidden; }
+body.mobile-open #mobileMenu { display: block; }
+
+/* when submenu parent has .open, show submenu */
+.has-submenu.open > .submenu { display: block; }
+
 /* Legal Pages */
 .legal-content {
     padding: 60px 0 80px 0;
