@@ -1,4 +1,4 @@
-body {
+ody {
     margin: 0;
     font-family: 'Segoe UI', Arial, sans-serif;
     background: #fff;
@@ -46,7 +46,7 @@ nav a {
     font-weight: 500;
 }
 .btn-header {
-    background: #217ab7;
+    background: #197cc6;
     color: #fff;
     padding: 16px 40px;
     font-size: 1.15rem;
@@ -105,7 +105,7 @@ nav a {
     transition: background .2s, color .2s, border .2s;
 }
 .btn-primary {
-    background: #217ab7;
+    background: #197cc6;
     color: #fff;
 }
 .btn-primary:hover {
@@ -118,7 +118,7 @@ nav a {
 }
 .btn-secondary:hover {
     background: #fff;
-    color: #217ab7;
+    color: #197cc6;
 }
 
 /* Stats */
@@ -141,7 +141,7 @@ nav a {
 .stat-value {
     font-size: 2rem;
     font-weight: 700;
-    color: #217ab7;
+    color: #197cc6;
 }
 .stat-label {
     font-size: 1rem;
@@ -153,7 +153,7 @@ nav a {
     margin: 40px 0;
 }
 .services h2 {
-    color: #217ab7;
+    color: #197cc6;
     font-size: 1.4rem;
     font-weight: 600;
     margin-bottom: 32px;
@@ -235,7 +235,7 @@ nav a {
     margin: 40px 0;
 }
 .testimonials h2 {
-    color: #217ab7;
+    color: #197cc6;
     font-size: 1.4rem;
     font-weight: 600;
     margin-bottom: 32px;
@@ -273,7 +273,7 @@ nav a {
 }
 .author-name {
     font-weight: 600;
-    color: #217ab7;
+    color: #197cc6;
     font-size: 1rem;
 }
 .author-position {
@@ -287,7 +287,7 @@ nav a {
     text-align: center;
 }
 .clients h2 {
-    color: #217ab7;
+    color: #197cc6;
     font-size: 1.2rem;
     font-weight: 600;
     margin-bottom: 24px;
@@ -324,7 +324,7 @@ footer {
 }
 
 .footer-column h4 {
-    color: #217ab7;
+    color: #197cc6;
     font-size: 1.1rem;
     font-weight: 600;
     margin: 0 0 20px 0;
@@ -348,7 +348,7 @@ footer {
 }
 
 .footer-column ul li a:hover {
-    color: #217ab7;
+    color: #197cc6;
 }
 
 .footer-logo {
@@ -424,7 +424,7 @@ footer {
 /* hover/active state: blue background with white bars */
 .mobile-menu-toggle:hover,
 .mobile-menu-toggle:focus {
-    background: #217ab7;
+    background: #197cc6;
 }
 .mobile-menu-toggle:hover .hamburger,
 .mobile-menu-toggle:focus .hamburger,
@@ -477,7 +477,7 @@ body.mobile-open #mobileMenu { display: block; }
 }
 .legal-content h1 {
     font-size: 2.5rem;
-    color: #217ab7;
+    color: #197cc6;
     margin-bottom: 40px;
     text-align: center;
 }
@@ -504,7 +504,7 @@ body.mobile-open #mobileMenu { display: block; }
     margin-bottom: 8px;
 }
 .legal-section a {
-    color: #217ab7;
+    color: #197cc6;
     text-decoration: none;
 }
 .legal-section a:hover {
@@ -515,7 +515,7 @@ body.mobile-open #mobileMenu { display: block; }
     text-align: center;
 }
 .back-link a {
-    color: #217ab7;
+    color: #197cc6;
     text-decoration: none;
     font-weight: 500;
     font-size: 1.1rem;
@@ -533,9 +533,39 @@ body.mobile-open #mobileMenu { display: block; }
     padding: 40px 0;
     margin-top: 20px; /* espace sous le header */
 }
+
+/* Scoped gradient only for the Prestations page hero */
+.page-prestations .page-hero {
+    /* softer gradient and slightly more vertical space */
+    background: linear-gradient(to bottom, rgba(245,249,253,1) 0%, rgba(232,237,243,0.9) 40%, rgba(232,237,243,0.95) 70%);
+    border-top: 2px solid #e2eaf2;
+    border-bottom: none;
+    padding: 50px 0 80px;
+    position: relative;
+}
+
+.page-prestations .page-hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background: linear-gradient(to bottom, rgba(232,237,243,0.95) 0%, rgba(232, 237, 243, 0) 100%);
+}
+/* ensure hero content sits above any overlays */
+.page-prestations .page-hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+.page-prestations .page-hero h1,
+.page-prestations .page-hero p {
+    text-shadow: 0 2px 6px rgba(0,0,0,0.12);
+}
 .page-hero h1 {
     margin: 0 0 8px 0;
-    color: #217ab7;
+    color: #197cc6;
     font-size: 2.2rem;
 }
 .page-hero p {
@@ -550,7 +580,7 @@ body.mobile-open #mobileMenu { display: block; }
     padding: 36px 0 10px 0;
 }
 .team-title {
-    color: #217ab7;
+    color: #197cc6;
     font-size: 1.4rem;
     font-weight: 600;
     margin: 0 0 18px 0;
@@ -561,7 +591,7 @@ body.mobile-open #mobileMenu { display: block; }
     display: block;
     width: 48px;
     height: 3px;
-    background: #217ab7;
+    background: #197cc6;
     margin-top: 8px;
 }
 .team-grid {
@@ -661,6 +691,89 @@ body.mobile-open #mobileMenu { display: block; }
     background: #fff;
 }
 
+/* Fond image pour la section électronique */
+.electronique-bg {
+    background: url('./images/services/service-elec.jpg') center center/cover no-repeat;
+    position: relative;
+    color: #fff;
+}
+/* Overlay avec dégradé progressif */
+.electronique-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* start lighter (soft white), then gentle mid-tone, then darker at bottom */
+    background: linear-gradient(to bottom,
+        rgba(255,255,255,0.65) 0%,
+        rgba(255,255,255,0.45) 15%,
+        rgba(0,0,0,0.08) 45%,
+        rgba(0,0,0,0.35) 75%
+    );
+    z-index: 0;
+}
+.electronique-bg > .container, .electronique-bg *,
+.robotique-bg > .container, .robotique-bg *,
+.informatique-bg > .container, .informatique-bg *,
+.data-bg > .container, .data-bg * {
+    position: relative;
+    z-index: 1;
+}
+
+/* Fond image pour la section robotique */
+.robotique-bg {
+    background: url('./images/services/service-proto.jpg') center center/cover no-repeat;
+    position: relative;
+    color: #fff;
+}
+/* Overlay plus sombre pour transition progressive */
+.robotique-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* slightly darker overall than electronique but still smooth */
+    background: linear-gradient(to bottom,
+       rgba(0,0,0,0.15) 75%,
+        rgba(0,0,0,0.45) 85%,
+        rgba(0,0,0,0.6) 100%
+    );
+    z-index: 0;
+}
+
+/* Fond image pour la section informatique */
+.informatique-bg {
+    background: url('./images/services/service-web.jpg') center center/cover no-repeat;
+    position: relative;
+    color: #fff;
+}
+
+/* Fond image pour la section data */
+.data-bg {
+    background: url('./images/services/service-data.jpg') center center/cover no-repeat;
+    position: relative;
+    color: #fff;
+}
+
+/* Overlay sombre pour toutes les sections avec fond */
+
+.informatique-bg::before,
+.data-bg::before {
+    /* deepest section: keep dark but start softer */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:  rgba(0,0,0,0.6) 100%;
+    z-index: 0;
+}
+
 .prestation-section.alt {
     background: #f8f9fa;
 }
@@ -670,7 +783,7 @@ body.mobile-open #mobileMenu { display: block; }
 }
 
 .prestation-header h2 {
-    color: #217ab7;
+    color:  #f4f4f4;
     font-size: 1.4rem;
     font-weight: 600;
     margin: 0 0 18px 0;
@@ -682,7 +795,7 @@ body.mobile-open #mobileMenu { display: block; }
     display: block;
     width: 48px;
     height: 3px;
-    background: #217ab7;
+    background: #197cc6;
     margin-top: 8px;
 }
 
@@ -696,18 +809,36 @@ body.mobile-open #mobileMenu { display: block; }
 }
 
 .prestation-list li {
-    background: #fff;
+    background: rgba(0,0,0,0.6) 100%;
     padding: 16px 20px;
-    border-left: 4px solid #217ab7;
+    border-left: 4px solid #28b0ca;
     border-radius: 4px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px #197cc6;
     font-size: 1rem;
-    transition: transform 0.2s, box-shadow 0.2s;
+    color: #ffffff; /* texte par défaut */
+    /* animate background-color and color so it fades and text changes color */
+    transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s, color 0.2s;
 }
 
 .prestation-list li:hover {
+    /* on hover, fade background to white */
+    background-color: #ffffff;
+    /* make text blue on hover */
+    color: #197cc6;
     transform: translateX(5px);
     box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+/* Ensure links inside list items inherit text color and transition */
+.prestation-list li a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+/* If a link has its own hover styles, prefer inheriting color from li on hover */
+.prestation-list li:hover a {
+    color: inherit;
 }
 
 .prestation-section.alt .prestation-list li {
@@ -716,7 +847,7 @@ body.mobile-open #mobileMenu { display: block; }
 
 /* CTA Section */
 .cta-section {
-    background: linear-gradient(135deg, #217ab7 0%, #17609a 100%);
+    background: linear-gradient(135deg, #197cc6 0%, #17609a 100%);
     color: #fff;
     padding: 80px 0;
     text-align: center;
@@ -737,7 +868,7 @@ body.mobile-open #mobileMenu { display: block; }
 .btn-cta {
     display: inline-block;
     background: #fff;
-    color: #217ab7;
+    color: #197cc6;
     padding: 16px 48px;
     font-size: 1.15rem;
     border-radius: 6px;
@@ -790,6 +921,4 @@ body.mobile-open #mobileMenu { display: block; }
         box-shadow: none;
     }
     
-    .contact-form-wrapper iframe {
-    }
 }
