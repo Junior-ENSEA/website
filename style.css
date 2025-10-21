@@ -770,7 +770,6 @@ body.mobile-open #mobileMenu { display: block; }
     height: 500px;
     border: none;
     display: block;
-    overflow: hidden;
 }
 
 @media (max-width: 768px) {
