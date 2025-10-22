@@ -559,6 +559,16 @@ body.mobile-open #mobileMenu { display: block; }
     z-index: 2;
 }
 
+/* Ligne bleue entre le bloc 'Nos prestations' (hero) et la première section */
+.page-prestations .page-hero {
+    border-bottom: 4px solid #217ab7; /* ligne bleue visible sous le hero */
+}
+
+/* Ajoute de l'espace entre la bordure et le contenu de la première section */
+.page-prestations .prestation-section:first-of-type .container {
+    padding-top: 28px;
+}
+
 .page-prestations .page-hero h1,
 .page-prestations .page-hero p {
     text-shadow: 0 2px 6px rgba(0,0,0,0.12);
@@ -776,6 +786,16 @@ body.mobile-open #mobileMenu { display: block; }
 
 .prestation-section.alt {
     background: #f8f9fa;
+}
+
+/* Ligne bleue entre chaque section de prestations */
+.prestation-section + .prestation-section {
+    border-top: 4px solid #217ab7; /* ligne bleu conforme au thème */
+}
+
+/* Ajuster l'espacement pour que le contenu ne soit pas collé à la bordure */
+.prestation-section + .prestation-section .container {
+    padding-top: 28px; /* ajoute de l'espace entre la bordure et le contenu */
 }
 
 .prestation-header {
