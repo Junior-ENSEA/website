@@ -62,7 +62,7 @@ nav a {
 /* Hero */
 .hero {
     position: relative;
-    height: 400px;
+    height: 600px; /* increased for a larger header image */
     margin-top: 20px;
     margin-bottom: 0;
 }
@@ -940,5 +940,7 @@ body.mobile-open #mobileMenu { display: block; }
         border-radius: 0;
         box-shadow: none;
     }
+    /* Mobile: reduce hero height so it fits smaller screens better */
+    .hero { height: 360px; }
     
 }
