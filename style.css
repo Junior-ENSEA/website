@@ -522,20 +522,6 @@ body.mobile-open #mobileMenu { display: block; }
 .legal-section a:hover {
     text-decoration: underline;
 }
-.back-link {
-    margin-top: 50px;
-    text-align: center;
-}
-.back-link a {
-    color: #197cc6;
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 1.1rem;
-    transition: color .2s;
-}
-.back-link a:hover {
-    color: #17609a;
-}
 
 /* Page Hero (reusable) */
 .page-hero, .team-hero {
