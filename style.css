@@ -1,14 +1,26 @@
+html, body {
+    height: 100%;
+}
+
 body {
     margin: 0;
     font-family: 'Segoe UI', Arial, sans-serif;
     background: #fff;
     color: #222;
+    display: flex; /* layout pour footer collant en bas */
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 .container {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
+}
+
+/* Faire en sorte que le contenu principal pousse le footer en bas */
+main {
+    flex: 1 0 auto; /* prend l'espace restant */
 }
 
 /* Header */
