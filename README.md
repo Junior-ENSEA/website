@@ -2,8 +2,6 @@
 
 Site vitrine de l'association Junior ENSEA, association agissant comme cabinet conseil en électronique, informatique et systèmes embarqués.
 
-**Slogan :** *Your Project, Our Matter*
-
 ## 📧 Contact
 
 **Email :** junior@ensea.fr  
