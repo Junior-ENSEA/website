@@ -323,7 +323,8 @@ nav a {
 
 /* Footer */
 footer {
-    margin-top: 0;
+    /* push footer to the bottom of the page when using flex layout on body */
+    margin-top: auto;
     background: #f8f9fa;
     padding: 60px 0 0 0;
 }
@@ -903,7 +904,6 @@ body.mobile-open #mobileMenu { display: block; }
 /* Contact Section */
 .contact-section {
     padding: 60px 0;
-    background: #f8f9fa;
 }
 
 .contact-form-wrapper {
