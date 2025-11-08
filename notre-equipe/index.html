@@ -116,7 +116,7 @@
             <h2 class="team-title">Responsables</h2>
             <div class="team-grid">
                 <article class="member-card">
-                    <img src="../images/teams/dylan.jpg" alt="Responsable Communication" class="member-photo" />
+                    <img src="../images/teams/rim.jpg" alt="Responsable Communication" class="member-photo" />
                     <div class="member-info">
                         <h3 class="member-name">Rim Bouchikhi</h3>
                         <p class="member-role">Responsable Communication</p>
@@ -240,6 +240,42 @@
         })();
     </script>
     <script src="https://unpkg.com/scrollreveal"></script>
+    <script>
+        // Replace missing/errored member photos with a simple SVG placeholder
+        document.addEventListener('DOMContentLoaded', function(){
+            function makePlaceholder(alt){
+                const wrapper = document.createElement('div');
+                wrapper.className = 'member-placeholder';
+                // accessible SVG silhouette inside a circle
+                const safeAlt = (alt || 'Membre').replace(/"/g, '&quot;');
+                wrapper.innerHTML = `
+                    <svg role="img" aria-label="${safeAlt}" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="72" height="72" focusable="false">
+                        <title>${safeAlt}</title>
+                        <circle cx="32" cy="32" r="30" fill="#e6eef5"/>
+                        <path d="M32 36c6.6 0 12 3.6 12 6v2H20v-2c0-2.4 5.4-6 12-6zm0-16a6 6 0 1 1 0 12 6 6 0 0 1 0-12z" fill="#197cc6"/>
+                    </svg>
+                `;
+                return wrapper;
+            }
+
+            document.querySelectorAll('.member-photo').forEach(function(img){
+                // if image fails to load, replace it with the placeholder
+                img.addEventListener('error', function(){
+                    const alt = img.getAttribute('alt') || img.getAttribute('data-name') || 'Membre';
+                    const placeholder = makePlaceholder(alt);
+                    if(img.parentNode) img.parentNode.replaceChild(placeholder, img);
+                });
+
+                // If src is empty or missing, show placeholder immediately
+                const src = img.getAttribute('src');
+                if(!src){
+                    const alt = img.getAttribute('alt') || img.getAttribute('data-name') || 'Membre';
+                    const placeholder = makePlaceholder(alt);
+                    if(img.parentNode) img.parentNode.replaceChild(placeholder, img);
+                }
+            });
+        });
+    </script>
     <script src="../js/team.js"></script>
 </body>
 </html>

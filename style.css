@@ -638,6 +638,20 @@ body.mobile-open #mobileMenu { display: block; }
     position: relative;
     z-index: 0;
 }
+
+/* Placeholder shown when a member photo fails to load */
+.member-placeholder {
+    width: 100%;
+    height: 240px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f0f3f6;
+    color: #197cc6;
+    border-radius: 8px;
+}
+.member-placeholder svg { width: 72px; height: 72px; }
+.member-placeholder title { display: none; }
 .member-info {
     position: absolute;
     left: 0;
